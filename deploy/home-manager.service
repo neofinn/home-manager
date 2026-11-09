@@ -1,0 +1,14 @@
+[Unit]
+Description=Home Manager voice-controlled switches
+After=network-online.target sound.target
+Wants=network-online.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/home-manager
+ExecStart=/home/pi/home-manager/.venv/bin/python -m home_manager --config config/devices.json --driver gpio
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

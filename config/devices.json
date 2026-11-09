@@ -1,0 +1,16 @@
+{
+  "wake_word": "home manager",
+  "driver": "mock",
+  "language": "en-IN",
+  "state_file": "state.json",
+  "devices": [
+    { "id": "living_light", "name": "light", "room": "living room", "pin": 17, "aliases": ["hall light", "tubelight"] },
+    { "id": "living_fan",   "name": "fan",   "room": "living room", "pin": 27, "aliases": ["hall fan"] },
+    { "id": "bedroom_light","name": "light", "room": "bedroom",     "pin": 22 },
+    { "id": "bedroom_fan",  "name": "fan",   "room": "bedroom",     "pin": 23 },
+    { "id": "kitchen_light","name": "light", "room": "kitchen",     "pin": 24 },
+    { "id": "geyser",       "name": "geyser","room": "bathroom",    "pin": 25, "aliases": ["water heater"] },
+    { "id": "tv_socket",    "name": "tv",    "room": "living room", "pin": 5,  "aliases": ["television"] },
+    { "id": "porch_light",  "name": "porch light", "pin": 6, "aliases": ["outside light", "gate light"] }
+  ]
+}

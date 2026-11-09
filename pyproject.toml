@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "home-manager"
+version = "0.1.0"
+description = "Voice-controlled switches for household circuits (Raspberry Pi + relay board)"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+voice = ["SpeechRecognition>=3.10", "PyAudio>=0.2.13", "pyttsx3>=2.90"]
+offline = ["vosk>=0.3.45"]
+pi = ["gpiozero>=2.0", "lgpio>=0.2"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+home-manager = "home_manager.__main__:main"
+
+[tool.setuptools]
+packages = ["home_manager"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
